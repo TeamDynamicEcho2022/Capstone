@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import NotFound from './pages/NotFound'
 
 
 const App = (props) => {
@@ -16,6 +17,7 @@ const App = (props) => {
         <Routes>
           <Route path='/' element={<Home{...props}/>}/>
           <Route path='/about' element={<AboutUs/>}/>
+          <Route path= '/*' element={<NotFound/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>
