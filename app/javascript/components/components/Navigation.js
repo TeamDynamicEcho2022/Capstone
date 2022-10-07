@@ -3,11 +3,14 @@ import {Nav, NavItem} from "reactstrap"
 import { NavLink } from "react-router-dom"
 
 const Navigation = ({
+    current_user,
     logged_in,
     sign_in_route,
     sign_out_route,
     new_user_route
 }) => {
+
+
     return (
         <>
         <Nav>
@@ -30,7 +33,7 @@ const Navigation = ({
              )}
              {logged_in && (
                 <NavItem>
-                    <NavLink to ="/">
+                    <NavLink to ={`/${current_user.id}/medications/`}>
                         Your Dashboard
                     </NavLink>  
                 </NavItem>
