@@ -10,7 +10,7 @@ medications = [
         strength: '10mg',
         frequency: 'every day',
         image: 'https://cdn.honeybeehealth.com/product_units/lipitor-tablet-10mg', 
-        is_taken: 'false'
+        is_taken: false
     }, 
     {
         drug_name: 'Gabapentin',
@@ -19,7 +19,7 @@ medications = [
         strength: '300mg',
         frequency: 'every day',
         image: 'https://www.grxstatic.com/d4fuqqd5l3dbz/products/cwf_tms/DrugItem_14345.PNG',
-        is_taken: 'false'
+        is_taken: false
     },
     {
         drug_name: 'Azithromycin',
@@ -28,11 +28,11 @@ medications = [
         strength: '250mg',
         frequency: 'every day',
         image: 'https://www.grxstatic.com/d4fuqqd5l3dbz/products/DrugItem_28720.JPG', 
-        is_taken: 'false'
+        is_taken: false
     }, 
 ]
 
 medications.each do |medication|
-    user.medications.create(medication)
+    user.medications.create!(medication)
     p "added: #{medication}"
   end
