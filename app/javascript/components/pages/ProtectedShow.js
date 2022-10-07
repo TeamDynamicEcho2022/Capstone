@@ -10,14 +10,9 @@ const ProtectedShow = ({
     sign_out_route
 }) => {
 
-    // const {accountid} = useParams();
-    // const {id} = useParams();
-
     const myOwnMedications = MockMedicationsPass?.filter(mockMeds => mockMeds.user_id === current_user?.id)
     const TodaysMedicationInfo = myOwnMedications?.map(MedsName => MedsName.drug_name + " " + MedsName.strength).join(" ")
-    // console.log(myOwnMedications)
-    // console.log(TodaysMedicationInfo)
-    // console.log(current_user)
+
 
 
     return (

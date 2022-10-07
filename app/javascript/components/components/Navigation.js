@@ -10,8 +10,6 @@ const Navigation = ({
     new_user_route
 }) => {
 
-// let specifiedMedication = MockMedicationsPass.find((Med) => Med.id === +id)
-// let currentUser = current_user[0].find((user) => user.id === +id)
 
     return (
         <>
