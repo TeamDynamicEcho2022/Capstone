@@ -14,8 +14,8 @@ class MedicationsController < ApplicationController
     end
 
     def show
-        user = User.find(params[:id])
-        render json: user, include: [:medication]
+        medication = Medication.find(params[:id])
+        render json: medication, include: [:user]
     end
   
     def update
