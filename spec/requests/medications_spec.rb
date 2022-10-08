@@ -52,16 +52,16 @@ RSpec.describe "Medications", type: :request do
   describe "PATCH /users/:user_id/medications/:id" do
     it 'updates an existing medication within the database' do
       med_params = {
-      medication: {
-        drug_name: 'testdrug',
-        drug_cat: 'uncategorizable',
-        description: 'whatever',
-        strength: '10000mcg',
-        frequency: 'all the time',
-        image: 'image.com',
-        is_taken: false,
-        user_id: user.id
-      }
+        medication: {
+          drug_name: 'testdrug',
+          drug_cat: 'uncategorizable',
+          description: 'whatever',
+          strength: '10000mcg',
+          frequency: 'all the time',
+          image: 'image.com',
+          is_taken: false,
+          user_id: user.id
+        }
     }
 
     post "/users/#{user.id}/medications", params: med_params
