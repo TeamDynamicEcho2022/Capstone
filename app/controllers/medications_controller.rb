@@ -1,6 +1,6 @@
 class MedicationsController < ApplicationController
     def index
-        medications = Medication.all
+        medications = Medication.where(params[:user_id] == current_user.id)
         render json: medications
     end
   
