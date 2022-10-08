@@ -2,6 +2,25 @@ require 'rails_helper'
 
 RSpec.describe "Medications", type: :request do
   user = User.where(email: 'email@test.com').first_or_create(password: 'password', password_confirmation: 'password',first_name:'test', last_name:'subject' )
+  describe "GET medications#index" do
+    it "gets a list of medications for user" do
+      user.medications.create(
+        drug_name: 'testdrug',
+        drug_cat: 'uncategorizable',
+        description: 'whatever',
+        strength: '10000mcg',
+        frequency: 'all the time',
+        image: 'image.com',
+        is_taken: false,
+        user_id: user.id)
+
+    get "/users/#{user.id}/medications"
+
+    expect(user.medications.length).to eq 1
+    expect(response).to have_http_status(200)
+    end
+  end
+
   describe "POST /create" do
     it 'creates a new medication for a user' do
     med_params = {
@@ -17,7 +36,7 @@ RSpec.describe "Medications", type: :request do
       }
     }
 
-    post '/users/:user_id/medications', params: med_params
+    post "/users/#{user.id}/medications", params: med_params
 
     medication = Medication.last
 
@@ -45,7 +64,7 @@ RSpec.describe "Medications", type: :request do
       }
     }
 
-    post '/users/:user_id/medications', params: med_params
+    post "/users/#{user.id}/medications", params: med_params
 
     edit_params = {
       medication: {
