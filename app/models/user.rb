@@ -5,8 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :medications
-
-  belongs_to :user
   validates :first_name, :last_name, :email, :password, presence: true
 
 

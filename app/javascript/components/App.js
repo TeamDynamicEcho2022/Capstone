@@ -8,9 +8,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import NotFound from './pages/NotFound'
 import ProtectedShow from './pages/ProtectedShow'
 import mockMedicationsData from './MockMedications'
+import MedicationNew from './pages/MedicationNew'
 
 
 const App = (props) => {
+  const createMedication = (medication) => {
+    console.log(medication)
+  }
+
   
 
     return (
@@ -20,6 +25,7 @@ const App = (props) => {
           <Route path='/' element={<Home{...props}/>}/>
           <Route path='/about' element={<AboutUs/>}/>
           <Route path= '/*' element={<NotFound/>}/>
+          <Route path='/medicationnew' element={<MedicationNew createMedication={createMedication}/>}/>
           <Route path= '/:userid/medications/' element={<ProtectedShow {...props} MockMedicationsPass={mockMedicationsData}/> }/>
         </Routes>
         <Footer/>
