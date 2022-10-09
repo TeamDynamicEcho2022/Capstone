@@ -1,5 +1,6 @@
 import React from 'react'
-import {Card, CardHeader, ListGroup, ListGroupItem, Input} from "reactstrap"
+import {Card, CardHeader, ListGroup, ListGroupItem, Input, Button} from "reactstrap"
+import { NavLink } from 'react-router-dom'
 
 const ProtectedShow = ({
     MockMedicationsPass,
@@ -25,6 +26,7 @@ const ProtectedShow = ({
         {myOwnMedications?.map((DisplayMyMeds)=>{
         return (
               <>
+              <NavLink to={`/${DisplayMyMeds.user_id}/medications/${DisplayMyMeds.id}`}>
                 <Card style={{width: '18rem'}}
                     >
                   <CardHeader>
@@ -52,6 +54,7 @@ const ProtectedShow = ({
                     </ListGroupItem>
                   </ListGroup>
                 </Card>
+              </NavLink>
               </>
     )
 })}

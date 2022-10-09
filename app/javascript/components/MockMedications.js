@@ -1,6 +1,7 @@
 const mockMedicationsData = [
 
-    {   user_id: 1,
+    {   id: 1,
+        user_id: 1,
         drug_name: 'Atorvastatin',
         drug_cat: 'HMG-CoA reductase inhibitor',
         description: 'For treatment of high cholesterol',
@@ -9,7 +10,8 @@ const mockMedicationsData = [
         image: 'https://cdn.honeybeehealth.com/product_units/lipitor-tablet-10mg', 
         is_taken: false
     }, 
-    {   user_id: 1,
+    {   id: 2,
+        user_id: 1,
         drug_name: 'Gabapentin',
         drug_cat: 'Anticonvulsant',
         description: 'Prevent seizures and relieve pain for certain conditions in the nervous system',
@@ -18,7 +20,8 @@ const mockMedicationsData = [
         image: 'https://www.grxstatic.com/d4fuqqd5l3dbz/products/cwf_tms/DrugItem_14345.PNG',
         is_taken: false
     },
-    {   user_id: 3,
+    {   id: 3,
+        user_id: 3,
         drug_name: 'Azithromycin',
         drug_cat: 'Macrolide Antibiotic',
         description: 'Used for treatment of bacterial infections',
