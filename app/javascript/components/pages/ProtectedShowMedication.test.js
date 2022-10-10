@@ -14,7 +14,6 @@ const renderComponent = () => {
     </MemoryRouter>
   )
 } 
-
 describe('ProtectedShowMedication', () => { 
     it("renders the drug category: HMG-CoA reductase inhibitor", ()=> {
       renderComponent()

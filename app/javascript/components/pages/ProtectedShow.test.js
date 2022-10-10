@@ -14,7 +14,7 @@ describe("<ProtectedShow />", () => {
     it("renders the Card Header", () => {
         render(
             <BrowserRouter>
-            <ProtectedShow mockMedicationsDataPass={mockMedicationsData}/>
+                <ProtectedShow mockMedicationsDataPass={mockMedicationsData}/>
             </BrowserRouter>
         )
         const cardheader = screen.getAllByRole("heading")
