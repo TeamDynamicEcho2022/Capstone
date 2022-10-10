@@ -62,7 +62,7 @@ RSpec.describe "Medications", type: :request do
           is_taken: false,
           user_id: user.id
         }
-    }
+      }
 
     post "/users/#{user.id}/medications", params: med_params
 
@@ -143,7 +143,7 @@ RSpec.describe "Medications", type: :request do
           is_taken: false,
           user_id: user.id
         }
-    }
+      }
 
     post "/users/#{user.id}/medications", params: med_params
 
