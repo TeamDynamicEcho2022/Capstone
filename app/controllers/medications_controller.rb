@@ -24,16 +24,16 @@ class MedicationsController < ApplicationController
         if medication.valid?
             render json: medication
         else
-            render json: medication.errors
+            render json: medication.errors, status: 422
         end
     end
   
     def destroy
         medication = Medication.find(params[:id])
-        if medication.destroy
-            render json: medication
+        if medication.valid?
+            medication.destroy
         else
-            render json: medication.errors
+            render json: medication.errors, status: 422
         end
     end
   
