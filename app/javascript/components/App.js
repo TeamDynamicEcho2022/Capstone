@@ -23,6 +23,11 @@ const App = (props) => {
     console.log("id:", id)
   }
 
+  const deleteMedication = (medication, id) => {
+    console.log("deleted medication id:", id)
+  }
+
+
   
 
     return (
@@ -34,7 +39,7 @@ const App = (props) => {
           <Route path= '/*' element={<NotFound/>}/>
           <Route path= '/medicationnew' element={<MedicationNew createMedication={createMedication}/>}/>
           <Route path= '/:userid/medications/' element={<ProtectedShow {...props} MockMedicationsPass={mockMedicationsData}/> }/>
-          <Route path= '/:userid/medications/:id' element={<ProtectedShowMedication {...props} MockMedicationsPass={mockMedicationsData} />}/>
+          <Route path= '/:userid/medications/:id' element={<ProtectedShowMedication {...props} MockMedicationsPass={mockMedicationsData} deleteMedication={deleteMedication}/>}/>
           <Route path= '/:userid/medicationupdate/:id' element={<MedicationUpdate MockMedicationsPass={mockMedicationsData} editMedication={editMedication}/>} />
         </Routes>
         <Footer/>

@@ -5,13 +5,18 @@ import { NavLink } from 'react-router-dom'
 
 const ProtectedShowMedication = ({
     MockMedicationsPass,
-    current_user
+    current_user,
+    deleteMedication
 }) => {
 
     const { id } = useParams()
     let currentMedications = MockMedicationsPass?.find((medication) => medication?.id === +id)
     console.log(currentMedications)
 
+    const handleDelete = () => {
+        deleteMedication(currentMedications, currentMedications.id)
+
+    }
 
     return (
         <>
@@ -47,9 +52,7 @@ const ProtectedShowMedication = ({
                             <Button> Edit </Button>
                         </NavLink>
                     <br></br>
-                        <NavLink>
-                            <Button> Delete </Button>
-                        </NavLink>
+                            <Button onClick={handleDelete}> Delete </Button>
                     </div>
             </ListGroup>
         </Card>
