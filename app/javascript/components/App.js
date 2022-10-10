@@ -9,7 +9,7 @@ import NotFound from './pages/NotFound'
 import ProtectedShow from './pages/ProtectedShow'
 import mockMedicationsData from './MockMedications'
 import MedicationNew from './pages/MedicationNew'
-
+import ProtectedShowMedication from './pages/ProtectedShowMedication'
 
 const App = (props) => {
   const createMedication = (medication) => {
@@ -22,11 +22,12 @@ const App = (props) => {
       <BrowserRouter>
         <Header {...props} MockMedicationsPass={mockMedicationsData}/>
         <Routes>
-          <Route path='/' element={<Home{...props}/>}/>
-          <Route path='/about' element={<AboutUs/>}/>
+          <Route path= '/' element={<Home{...props}/>}/>
+          <Route path= '/about' element={<AboutUs/>}/>
           <Route path= '/*' element={<NotFound/>}/>
-          <Route path='/medicationnew' element={<MedicationNew createMedication={createMedication}/>}/>
+          <Route path= '/medicationnew' element={<MedicationNew createMedication={createMedication}/>}/>
           <Route path= '/:userid/medications/' element={<ProtectedShow {...props} MockMedicationsPass={mockMedicationsData}/> }/>
+          <Route path= '/:userid/medications/:id' element={<ProtectedShowMedication MockMedicationsPass={mockMedicationsData} />}/>
         </Routes>
         <Footer/>
       </BrowserRouter>

@@ -1,5 +1,6 @@
 import React from 'react'
-import {Card, CardHeader, ListGroup, ListGroupItem, Input} from "reactstrap"
+import {Card, CardHeader, ListGroup, ListGroupItem, Input, Button} from "reactstrap"
+import { NavLink } from 'react-router-dom'
 
 const ProtectedShow = ({
     MockMedicationsPass,
@@ -11,35 +12,36 @@ const ProtectedShow = ({
 }) => {
 
     const myOwnMedications = MockMedicationsPass?.filter(mockMeds => mockMeds.user_id === current_user?.id)
-    const TodaysMedicationInfo = myOwnMedications?.map(MedsName => MedsName.drug_name + " " + MedsName.strength).join(" ")
+    const todaysMedicationInfo = myOwnMedications?.map(medsName => medsName.drug_name + " " + medsName.strength).join(" ")
 
 
 
     return (
         <>
         <h1> Greetings {current_user?.first_name} {current_user?.last_name} !</h1>
-        <h3> Here are today's Medications: {TodaysMedicationInfo} </h3>
+        <h3> Here are today's Medications: {todaysMedicationInfo} </h3>
 
         <br></br>
         <h3>Current List of Medications:</h3>
-        {myOwnMedications?.map((DisplayMyMeds)=>{
+        {myOwnMedications?.map((displayMyMeds)=>{
         return (
               <>
+              <NavLink to={`/${displayMyMeds.user_id}/medications/${displayMyMeds.id}`}>
                 <Card style={{width: '18rem'}}
                     >
                   <CardHeader>
-                    {DisplayMyMeds.drug_name}
+                    {displayMyMeds.drug_name}
                   </CardHeader>
                     <ListGroup flush>
                     <img
                       alt="Card"
-                      src={DisplayMyMeds.image}
+                      src={displayMyMeds.image}
                     />
                     <ListGroupItem>
-                     Frequency: {DisplayMyMeds.frequency}
+                     Frequency: {displayMyMeds.frequency}
                     </ListGroupItem>
                     <ListGroupItem>
-                     Strength: {DisplayMyMeds.strength}
+                     Strength: {displayMyMeds.strength}
                     </ListGroupItem>
                     <ListGroupItem>
                     Taken: <Input type="checkbox"/>
@@ -52,6 +54,7 @@ const ProtectedShow = ({
                     </ListGroupItem>
                   </ListGroup>
                 </Card>
+              </NavLink>
               </>
     )
 })}

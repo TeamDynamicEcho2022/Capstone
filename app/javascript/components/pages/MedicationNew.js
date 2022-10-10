@@ -57,7 +57,7 @@ const MedicationNew = ({createMedication}) => {
             <Label for="strength"> Strength: </Label>
             <Input 
             type="text" 
-            ame="strength" 
+            name="strength" 
             placeholder="Enter Strength" 
             onChange={handleChange} 
             value={newMedication.strength}
