@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from 'reactstrap'
-import errorimg from '../images/error_med'
+import {errorimg} from '../images/error_med'
 
 
 

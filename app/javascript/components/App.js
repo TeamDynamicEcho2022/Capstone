@@ -10,10 +10,17 @@ import ProtectedShow from './pages/ProtectedShow'
 import mockMedicationsData from './MockMedications'
 import MedicationNew from './pages/MedicationNew'
 import ProtectedShowMedication from './pages/ProtectedShowMedication'
+import MedicationUpdate from './pages/MedicationUpdate'
 
 const App = (props) => {
+
   const createMedication = (medication) => {
     console.log(medication)
+  }
+
+  const editMedication = (medication, id) => {
+    console.log("medication:", medication)
+    console.log("id:", id)
   }
 
   
@@ -27,7 +34,8 @@ const App = (props) => {
           <Route path= '/*' element={<NotFound/>}/>
           <Route path= '/medicationnew' element={<MedicationNew createMedication={createMedication}/>}/>
           <Route path= '/:userid/medications/' element={<ProtectedShow {...props} MockMedicationsPass={mockMedicationsData}/> }/>
-          <Route path= '/:userid/medications/:id' element={<ProtectedShowMedication MockMedicationsPass={mockMedicationsData} />}/>
+          <Route path= '/:userid/medications/:id' element={<ProtectedShowMedication {...props} MockMedicationsPass={mockMedicationsData} />}/>
+          <Route path= '/:userid/medicationupdate/:id' element={<MedicationUpdate MockMedicationsPass={mockMedicationsData} editMedication={editMedication}/>} />
         </Routes>
         <Footer/>
       </BrowserRouter>
