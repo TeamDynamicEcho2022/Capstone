@@ -1,9 +1,18 @@
 import React from 'react'
 
 const Footer = () => {
+
+    const goingUp = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+
     return (
+
     <>
-        <h1>This is the Footer</h1>
+        <button onClick={goingUp}>Top</button>
     </>
     )
 }
