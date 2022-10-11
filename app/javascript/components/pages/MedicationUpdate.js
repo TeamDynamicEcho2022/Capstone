@@ -4,11 +4,11 @@ import { NavLink } from 'react-router-dom'
 import  {useParams}  from 'react-router-dom'
 
 const MedicationUpdate = ({
-    MockMedicationsPass,
+    medications,
     editMedication}) => {
 
     const  {id} = useParams()
-    let currentMedication = MockMedicationsPass?.find((medication) => medication?.id === +id)
+    let currentMedication = medications?.find((medication) => medication?.id === +id)
     console.log(currentMedication)
 
     const [updateMedication, setUpdateMedication] = useState({
@@ -18,7 +18,7 @@ const MedicationUpdate = ({
       strength:currentMedication?.strength,
       frequency: currentMedication?.frequency,
       image: currentMedication?.image,
-      is_taken: "false"
+      is_taken: false
     })
 
     const handleChange = (e) => {

@@ -3,7 +3,7 @@ import {Card, CardHeader, ListGroup, ListGroupItem, Input, Button} from "reactst
 import { NavLink } from 'react-router-dom'
 
 const ProtectedShow = ({
-    MockMedicationsPass,
+    medications,
     logged_in,
     current_user,
     new_user_route,
@@ -11,19 +11,19 @@ const ProtectedShow = ({
     sign_out_route
 }) => {
 
-    const myOwnMedications = MockMedicationsPass?.filter(mockMeds => mockMeds.user_id === current_user?.id)
-    const todaysMedicationInfo = myOwnMedications?.map(medsName => medsName.drug_name + " " + medsName.strength).join(" ")
+    const todaysMedicationInfo = medications?.map(medsName => `${medsName.drug_name} ${medsName.strength} `)
 
 
 
     return (
         <>
         <h1> Greetings {current_user?.first_name} {current_user?.last_name} !</h1>
-        <h3> Here are today's Medications: {todaysMedicationInfo} </h3>
+        <h3> Here are today's Medications: </h3>
+        <p>{todaysMedicationInfo}</p>
 
         <br></br>
         <h3>Current List of Medications:</h3>
-        {myOwnMedications?.map((displayMyMeds)=>{
+        {medications?.map((displayMyMeds)=>{
         return (
               <>
               <NavLink to={`/${displayMyMeds.user_id}/medications/${displayMyMeds.id}`}>
