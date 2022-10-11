@@ -70,13 +70,29 @@ const MedicationNew = ({createMedication, current_user}) => {
           <br/>
           <FormGroup>
             <Label for="frequency"> Frequency: </Label>
-              <Input 
-              type="text" 
-              name="frequency" 
-              placeholder="Enter Frequency" 
+            <Input
+              id="exampleSelect"
+              name="frequency"
+              type="select"
               onChange={handleChange} 
               value={newMedication.frequency}
-              />
+            >
+                <option>
+                  Daily
+                </option>
+                <option>
+                  Every Other Day
+                </option>
+                <option>
+                  Once a Week
+                </option>
+                <option>
+                  Twice a Week
+                </option>
+                <option>
+                  Once a Month
+                </option>
+            </Input>
           </FormGroup>
           <br/>
           <FormGroup>
