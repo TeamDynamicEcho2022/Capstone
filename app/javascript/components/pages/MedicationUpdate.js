@@ -75,13 +75,29 @@ const MedicationUpdate = ({
           </FormGroup>
           <FormGroup>
             <Label for="frequency"> Frequency: </Label>
-                <Input 
-                type="text" 
-                name="frequency" 
-                placeholder="Enter Frequency" 
-                onChange={handleChange} 
-                value={updateMedication.frequency}
-                />
+            <Input
+              id="exampleSelect"
+              name="frequency"
+              type="select"
+              onChange={handleChange} 
+              value={updateMedication.frequency}
+            >
+                <option>
+                  Daily
+                </option>
+                <option>
+                  Every Other Day
+                </option>
+                <option>
+                  Once a Week
+                </option>
+                <option>
+                  Twice a Week
+                </option>
+                <option>
+                  Once a Month
+                </option>
+            </Input>
           </FormGroup>
           <FormGroup>
             <Label for="image"> Upload Image url: </Label>
