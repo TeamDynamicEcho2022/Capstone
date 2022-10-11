@@ -11,7 +11,6 @@ const ProtectedShow = ({
     sign_out_route
 }) => {
 
-    // const myOwnMedications = medications?.filter(mockMeds => mockMeds.user_id === current_user?.id)
     const todaysMedicationInfo = medications?.map(medsName => `${medsName.drug_name} ${medsName.strength} `)
 
 
