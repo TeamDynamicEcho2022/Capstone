@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
 
-const MedicationNew = ({createMedication, current_user},) => {
+const MedicationNew = ({createMedication, current_user}) => {
     const [newMedication, setNewMedication] = useState({
       drug_name: "",
       drug_cat: "",
