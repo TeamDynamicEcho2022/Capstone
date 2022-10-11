@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
 
-const MedicationNew = ({createMedication}) => {
+const MedicationNew = ({createMedication, current_user},) => {
     const [newMedication, setNewMedication] = useState({
       drug_name: "",
       drug_cat: "",
@@ -10,7 +10,8 @@ const MedicationNew = ({createMedication}) => {
       strength: "",
       frequency: "",
       image: "",
-      is_taken: "false"
+      is_taken: false,
+      user_id: current_user.id
     })
     const handleChange = (e) => {
       setNewMedication({...newMedication, [e.target.name]: e.target.value})
@@ -21,7 +22,7 @@ const MedicationNew = ({createMedication}) => {
     }
     return (
       <>
-        <h1>Add a New Medication Below</h1>
+        <h1>Add a New Medication</h1>
         <Form>
           <FormGroup>
             <Label for="drug_name"> Drug Name: </Label>
@@ -33,6 +34,7 @@ const MedicationNew = ({createMedication}) => {
               value={newMedication.drug_name}
               />
           </FormGroup>
+          <br/>
           <FormGroup>
             <Label for="drug_cat"> Drug Category: </Label>
               <Input
@@ -43,6 +45,7 @@ const MedicationNew = ({createMedication}) => {
               value={newMedication.drug_cat}
               />
           </FormGroup>
+          <br/>
           <FormGroup>
             <Label for="description"> Description: </Label>
               <Input 
@@ -53,6 +56,7 @@ const MedicationNew = ({createMedication}) => {
               value={newMedication.description}
               />
           </FormGroup>
+          <br/>
           <FormGroup>
             <Label for="strength"> Strength: </Label>
               <Input 
@@ -63,6 +67,7 @@ const MedicationNew = ({createMedication}) => {
               value={newMedication.strength}
               />
           </FormGroup>
+          <br/>
           <FormGroup>
             <Label for="frequency"> Frequency: </Label>
               <Input 
@@ -73,23 +78,25 @@ const MedicationNew = ({createMedication}) => {
               value={newMedication.frequency}
               />
           </FormGroup>
+          <br/>
           <FormGroup>
-            <Label for="image"> Upload Image url: </Label>
+            <Label for="image"> Image URL: </Label>
               <Input 
               type="text" 
               name="image" 
-              placeholder="Enter Upload Image URL" 
+              placeholder="Enter Image URL" 
               onChange={handleChange} 
               value={newMedication.url}
               />
           </FormGroup>
+          <br/>
         </Form>
           <NavLink to="/">
               <Button 
               color="primary" 
               onClick={handleSubmit} 
               name="submit">
-                Submit New Medication Form
+                Add Medication to Profile
               </Button>
           </NavLink>
       </>

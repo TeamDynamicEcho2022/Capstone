@@ -1,20 +1,25 @@
 import React from 'react'
 import {Card, CardHeader, ListGroup, ListGroupItem, Button} from 'reactstrap'
-import  {useParams}  from 'react-router-dom'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate, useParams } from 'react-router-dom'
 
 const ProtectedShowMedication = ({
-    MockMedicationsPass,
+    medications,
     current_user,
     deleteMedication
 }) => {
+    const navigate = useNavigate()
 
     const { id } = useParams()
-    let currentMedications = MockMedicationsPass?.find((medication) => medication?.id === +id)
+    let currentMedications = medications?.find((medication) => medication?.id === +id)
     console.log(currentMedications)
 
     const handleDelete = () => {
-        deleteMedication(currentMedications, currentMedications.id)
+        const userAnswer = window.confirm(`Are you sure you want to remove ${currentMedications.drug_name} from your profile?`)
+        if (userAnswer) {
+            deleteMedication(currentMedications, currentMedications.id)
+            navigate('/')
+            navigate(0)
+        }
 
     }
 

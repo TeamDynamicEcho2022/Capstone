@@ -21,13 +21,13 @@ const Navigation = ({
             </NavItem>
             <NavItem>
                 <NavLink to ="/about">
-                    AboutUs
+                    About Us
                 </NavLink>
             </NavItem>
              {logged_in && (
                 <NavItem>
                     <a href={sign_out_route}>
-                    sign_out 
+                    Sign Out 
                     </a>
                 </NavItem>
              )}
