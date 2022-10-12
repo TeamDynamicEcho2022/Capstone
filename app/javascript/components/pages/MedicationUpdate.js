@@ -21,6 +21,8 @@ const MedicationUpdate = ({
       is_taken: false
     })
 
+    const [takenBool, setTakenBool] = useState(true)
+
     const handleChange = (e) => {
       setUpdateMedication({...updateMedication, [e.target.name]: e.target.value})
     }
@@ -31,7 +33,7 @@ const MedicationUpdate = ({
     return (
         
       <>
-        <h1>Add a New Medication Below</h1>
+        <h1>Make Changes to Your {currentMedication.drug_name} Below</h1>
         <Form>
           <FormGroup>
             <Label for="drug_name"> Drug Name: </Label>
@@ -108,6 +110,16 @@ const MedicationUpdate = ({
                 onChange={handleChange} 
                 value={updateMedication.image}
                 />
+          </FormGroup>
+          <FormGroup switch>
+            <Label check>Have you taken this medication at its scheduled time for the day?</Label>
+              <Input 
+              type="switch" 
+              role="switch" 
+              onClick={() => {
+                updateMedication.is_taken = true
+              }}
+              />
           </FormGroup>
         </Form>
             <NavLink to="/">

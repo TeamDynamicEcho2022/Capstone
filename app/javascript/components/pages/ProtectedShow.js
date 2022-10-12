@@ -10,10 +10,8 @@ const ProtectedShow = ({
     sign_in_route,
     sign_out_route
 }) => {
-
-    const todaysMedicationInfo = medications?.map(medsName => `${medsName.drug_name} ${medsName.strength} `)
-
-
+    const filteredMedications = medications?.filter(medication => medication.is_taken === false)
+    const todaysMedicationInfo = filteredMedications?.map(medsName => `${medsName.drug_name} ${medsName.strength} `)
 
     return (
         <>
@@ -44,7 +42,8 @@ const ProtectedShow = ({
                      Strength: {displayMyMeds.strength}
                     </ListGroupItem>
                     <ListGroupItem>
-                    Taken: <Input type="checkbox"/>
+                    {displayMyMeds.is_taken && <>Taken Today: Yes</>}
+                    {!displayMyMeds.is_taken && <>Taken Today: No</>}
                     </ListGroupItem>
                     <ListGroupItem>
                      More Info 

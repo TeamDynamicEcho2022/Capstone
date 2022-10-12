@@ -50,7 +50,8 @@ const ProtectedShowMedication = ({
                     Strength: {currentMedications?.strength}
                 </ListGroupItem>
                 <ListGroupItem>
-                    Taken: {currentMedications?.is_taken}
+                    {currentMedications?.is_taken && <>Taken Today: Yes</>}
+                    {!currentMedications?.is_taken && <>Taken Today: No</>}
                 </ListGroupItem>
                     <div>
                         <NavLink to={`/${current_user?.id}/medicationupdate/${currentMedications?.id}`} >

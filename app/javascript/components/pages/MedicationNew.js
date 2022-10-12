@@ -34,7 +34,6 @@ const MedicationNew = ({createMedication, current_user}) => {
               value={newMedication.drug_name}
               />
           </FormGroup>
-          <br/>
           <FormGroup>
             <Label for="drug_cat"> Drug Category: </Label>
               <Input
@@ -45,7 +44,6 @@ const MedicationNew = ({createMedication, current_user}) => {
               value={newMedication.drug_cat}
               />
           </FormGroup>
-          <br/>
           <FormGroup>
             <Label for="description"> Description: </Label>
               <Input 
@@ -56,7 +54,6 @@ const MedicationNew = ({createMedication, current_user}) => {
               value={newMedication.description}
               />
           </FormGroup>
-          <br/>
           <FormGroup>
             <Label for="strength"> Strength: </Label>
               <Input 
@@ -67,7 +64,6 @@ const MedicationNew = ({createMedication, current_user}) => {
               value={newMedication.strength}
               />
           </FormGroup>
-          <br/>
           <FormGroup>
             <Label for="frequency"> Frequency: </Label>
             <Input
@@ -77,6 +73,8 @@ const MedicationNew = ({createMedication, current_user}) => {
               onChange={handleChange} 
               value={newMedication.frequency}
             >
+                <option>
+                </option>
                 <option>
                   Daily
                 </option>
@@ -94,7 +92,6 @@ const MedicationNew = ({createMedication, current_user}) => {
                 </option>
             </Input>
           </FormGroup>
-          <br/>
           <FormGroup>
             <Label for="image"> Image URL: </Label>
               <Input 
@@ -105,7 +102,6 @@ const MedicationNew = ({createMedication, current_user}) => {
               value={newMedication.url}
               />
           </FormGroup>
-          <br/>
         </Form>
           <NavLink to="/">
               <Button 
