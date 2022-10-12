@@ -21,8 +21,6 @@ const MedicationUpdate = ({
       is_taken: false
     })
 
-    const [takenBool, setTakenBool] = useState(true)
-
     const handleChange = (e) => {
       setUpdateMedication({...updateMedication, [e.target.name]: e.target.value})
     }
