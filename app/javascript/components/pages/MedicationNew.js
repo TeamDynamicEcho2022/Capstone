@@ -34,7 +34,6 @@ const MedicationNew = ({createMedication, current_user}) => {
               value={newMedication.drug_name}
               />
           </FormGroup>
-          <br/>
           <FormGroup>
             <Label for="drug_cat"> Drug Category: </Label>
               <Input
@@ -45,7 +44,6 @@ const MedicationNew = ({createMedication, current_user}) => {
               value={newMedication.drug_cat}
               />
           </FormGroup>
-          <br/>
           <FormGroup>
             <Label for="description"> Description: </Label>
               <Input 
@@ -56,7 +54,6 @@ const MedicationNew = ({createMedication, current_user}) => {
               value={newMedication.description}
               />
           </FormGroup>
-          <br/>
           <FormGroup>
             <Label for="strength"> Strength: </Label>
               <Input 
@@ -67,7 +64,6 @@ const MedicationNew = ({createMedication, current_user}) => {
               value={newMedication.strength}
               />
           </FormGroup>
-          <br/>
           <FormGroup>
             <Label for="frequency"> Frequency: </Label>
             <Input
@@ -78,23 +74,27 @@ const MedicationNew = ({createMedication, current_user}) => {
               value={newMedication.frequency}
             >
                 <option>
-                  Daily
                 </option>
                 <option>
-                  Every Other Day
+                  Every Day
+                </option>
+                <option>
+                  Every Other Day/ Twice a Day
+                </option>
+                <option>
+                  Every 4 Hours
+                </option>
+                <option>
+                  Every 6 Hours/ Four Times a Day
+                </option>
+                <option>
+                  Every 8 Hours/ Three Times a Day
                 </option>
                 <option>
                   Once a Week
                 </option>
-                <option>
-                  Twice a Week
-                </option>
-                <option>
-                  Once a Month
-                </option>
             </Input>
           </FormGroup>
-          <br/>
           <FormGroup>
             <Label for="image"> Image URL: </Label>
               <Input 
@@ -105,7 +105,6 @@ const MedicationNew = ({createMedication, current_user}) => {
               value={newMedication.url}
               />
           </FormGroup>
-          <br/>
         </Form>
           <NavLink to="/">
               <Button 

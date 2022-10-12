@@ -31,7 +31,7 @@ const MedicationUpdate = ({
     return (
         
       <>
-        <h1>Add a New Medication Below</h1>
+        <h1>Make Changes to Your {currentMedication.drug_name} Below</h1>
         <Form>
           <FormGroup>
             <Label for="drug_name"> Drug Name: </Label>
@@ -83,19 +83,22 @@ const MedicationUpdate = ({
               value={updateMedication.frequency}
             >
                 <option>
-                  Daily
+                  Every Day
                 </option>
                 <option>
-                  Every Other Day
+                  Every Other Day/ Twice a Day
+                </option>
+                <option>
+                  Every 4 Hours
+                </option>
+                <option>
+                  Every 6 Hours/ Four Times a Day
+                </option>
+                <option>
+                  Every 8 Hours/ Three Times a Day
                 </option>
                 <option>
                   Once a Week
-                </option>
-                <option>
-                  Twice a Week
-                </option>
-                <option>
-                  Once a Month
                 </option>
             </Input>
           </FormGroup>
@@ -108,6 +111,16 @@ const MedicationUpdate = ({
                 onChange={handleChange} 
                 value={updateMedication.image}
                 />
+          </FormGroup>
+          <FormGroup switch>
+            <Label check>Have you taken this medication at its scheduled time for the day?</Label>
+              <Input 
+              type="switch" 
+              role="switch" 
+              onClick={() => {
+                updateMedication.is_taken = true
+              }}
+              />
           </FormGroup>
         </Form>
             <NavLink to="/">

@@ -14,7 +14,6 @@ import MedicationUpdate from './pages/MedicationUpdate'
 
 const App = (props) => {
   const [ medications, setMedications ] = useState([])
-  console.log(props)
 
   useEffect(() => {
     readMedication()
