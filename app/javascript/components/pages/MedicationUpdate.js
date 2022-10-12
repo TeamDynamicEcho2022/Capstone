@@ -1,11 +1,12 @@
 import React, {useState} from "react"
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
-import { NavLink } from 'react-router-dom'
-import  {useParams}  from 'react-router-dom'
+import { NavLink, useParams, useNavigate } from 'react-router-dom'
 
 const MedicationUpdate = ({
     medications,
     editMedication}) => {
+
+    const navigate = useNavigate()
 
     const  {id} = useParams()
     let currentMedication = medications?.find((medication) => medication?.id === +id)
@@ -27,6 +28,8 @@ const MedicationUpdate = ({
   
     const handleSubmit = () => {
       editMedication(updateMedication, currentMedication.id)
+      navigate('/')
+      navigate(0)
     }
     return (
         
