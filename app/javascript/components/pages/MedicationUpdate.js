@@ -85,19 +85,22 @@ const MedicationUpdate = ({
               value={updateMedication.frequency}
             >
                 <option>
-                  Daily
+                  Every Day
                 </option>
                 <option>
-                  Every Other Day
+                  Every Other Day/ Twice a Day
+                </option>
+                <option>
+                  Every 4 Hours
+                </option>
+                <option>
+                  Every 6 Hours/ Four Times a Day
+                </option>
+                <option>
+                  Every 8 Hours/ Three Times a Day
                 </option>
                 <option>
                   Once a Week
-                </option>
-                <option>
-                  Twice a Week
-                </option>
-                <option>
-                  Once a Month
                 </option>
             </Input>
           </FormGroup>
