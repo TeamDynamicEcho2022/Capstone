@@ -1,8 +1,9 @@
 <body class="Background">
 <section class="LogInForm">
 <head>
+<br></br>
 <h2 class="LogIn">Log in</h2>
-
+<br></br>
 <div class="EmaiLabelName">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 </div>
@@ -20,7 +21,7 @@
   <span class="PasswordLabel">
     <%= f.label :password %>
     </span>
-    <%= f.password_field :password, autocomplete: "current-password", class:"form-control" %>
+    <%= f.password_field :password, autocomplete: "current-password", class:"form-control_sipass" %>
   </div>
 
   <% if devise_mapping.rememberable? %>

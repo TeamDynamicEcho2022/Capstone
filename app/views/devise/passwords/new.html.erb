@@ -1,8 +1,9 @@
 <body class="Background">
 <section class="ForgetPassForm">
 <head>
+<br></br>
 <h2 class="LogIn">Forgot your password?</h2>
-
+<br></br>
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -13,6 +14,7 @@
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control"%>
   </div>
 <p>
+<br></<br>
   <div class="actions">
     <%= f.submit "Send me reset password instructions" %>
     </p>
