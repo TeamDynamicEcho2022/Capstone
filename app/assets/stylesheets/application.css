@@ -1,4 +1,5 @@
  @import 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap';
+ @import 'custom/devise_styles.css';
 
  * {
     margin: 0;
