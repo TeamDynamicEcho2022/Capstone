@@ -1,4 +1,6 @@
 import React from 'react'
+import { NavLink } from "react-router-dom"
+import upArrow from "../assets/up-arrow.png"
 
 const Footer = () => {
 
@@ -11,9 +13,14 @@ const Footer = () => {
 
     return (
 
-    <>
-        <button onClick={goingUp}>Top</button>
-    </>
+    <footer>
+        <p className="footerBtn"><img src={upArrow} alt="Return to Top of Page" onClick={goingUp} style={{width: "25px", cursor: "pointer"}}/></p>
+        <div className="footerText" >
+        <NavLink to ="/about">
+            <p>Site by: Jereme, Dawit, and Daniel</p>
+        </NavLink>
+        </div>
+    </footer>
     )
 }
 

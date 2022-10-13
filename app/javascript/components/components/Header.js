@@ -4,9 +4,11 @@ import Navigation from "./Navigation"
 
 const Header = (props) => {
     return (
-    <>
-        <Navigation {...props} />
-    </>
+    <header>
+        <div className="headerNav">
+            <Navigation {...props} />
+        </div>
+    </header>
     )
 }
 

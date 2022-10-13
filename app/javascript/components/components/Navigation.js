@@ -13,7 +13,7 @@ const Navigation = ({
 
     return (
         <>
-        <Nav>
+        <Nav className="navBar">
             <NavItem>
                 <NavLink to ="/">
                 Home
@@ -24,42 +24,41 @@ const Navigation = ({
                     About Us
                 </NavLink>
             </NavItem>
-             {logged_in && (
-                <NavItem>
-                    <a href={sign_out_route}>
-                    Sign Out 
-                    </a>
-                </NavItem>
-             )}
-             {logged_in && (
+            {logged_in && (
                 <NavItem>
                     <NavLink to ={`/${current_user.id}/medications/`}>
                         Your Dashboard
                     </NavLink>  
                 </NavItem>
-             )}
-              {logged_in && (
+            )}
+            {logged_in && (
                 <NavItem>
                     <NavLink to ="/medicationnew">
                         Add Medication
                     </NavLink>
                 </NavItem>
-              )}
-              {!logged_in && (
+            )}
+            {!logged_in && (
                 <NavItem>
                     <a href={sign_in_route}>
                         Sign In
                     </a>   
                 </NavItem>
-              )}
-              {!logged_in && (
+            )}
+            {!logged_in && (
                 <NavItem>
                     <a href={new_user_route}>
                         Sign Up
                     </a>   
                 </NavItem>
-              )}
-
+            )}
+            {logged_in && (
+                <NavItem>
+                    <a href={sign_out_route}>
+                    Sign Out 
+                    </a>
+                </NavItem>
+            )}
         </Nav>
         </>
     )
