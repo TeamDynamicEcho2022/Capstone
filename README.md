@@ -113,7 +113,7 @@ With a quick click, our users will be able to have a sound mind and continue the
 - Daniel Clement
     - [Github](https://github.com/dnlclmnt)
     - [LinkedIn](https://www.linkedin.com/in/danielclement-/)
-- Jermey Doan
+- Jereme Doan
     - [Github](https://github.com/JPD99)
     - [LinkedIn](https://www.linkedin.com/in/jeremedoan/)
 

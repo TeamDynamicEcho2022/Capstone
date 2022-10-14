@@ -22,8 +22,8 @@ describe("<Navigation />", () => {
         )
         userEvent.click(screen.getByText("Home"))
         expect(screen.getByText("Home")).toBeInTheDocument()
-        userEvent.click(screen.getByText("AboutUs"))
-        expect(screen.getByText("AboutUs")).toBeInTheDocument()
+        userEvent.click(screen.getByText("About Us"))
+        expect(screen.getByText("About Us")).toBeInTheDocument()
         
     })
 })

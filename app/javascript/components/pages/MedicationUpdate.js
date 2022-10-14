@@ -34,7 +34,8 @@ const MedicationUpdate = ({
     return (
         
       <>
-        <h1>Make Changes to Your {currentMedication.drug_name} Below</h1>
+        <div className="Body">
+        <h1>Make Changes to Your {currentMedication?.drug_name} Below</h1>
         <Form>
           <FormGroup>
             <Label for="drug_name"> Drug Name: </Label>
@@ -134,6 +135,7 @@ const MedicationUpdate = ({
                     Submit Edited Medication
                 </Button>
             </NavLink>
+            </div>
       </>
     )
   }

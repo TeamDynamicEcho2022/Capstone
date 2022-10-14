@@ -11,7 +11,7 @@ const MedicationNew = ({createMedication, current_user}) => {
       frequency: "",
       image: "",
       is_taken: false,
-      user_id: current_user.id
+      user_id: current_user?.id
     })
     const handleChange = (e) => {
       setNewMedication({...newMedication, [e.target.name]: e.target.value})
@@ -22,6 +22,7 @@ const MedicationNew = ({createMedication, current_user}) => {
     }
     return (
       <>
+       <div className="Body">
         <h1>Add a New Medication</h1>
         <Form>
           <FormGroup>
@@ -114,6 +115,7 @@ const MedicationNew = ({createMedication, current_user}) => {
                 Add Medication to Profile
               </Button>
           </NavLink>
+          </div>  
       </>
     )
   }

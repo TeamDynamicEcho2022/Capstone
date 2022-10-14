@@ -12,6 +12,6 @@ describe("<MedicationNew />", () => {
         <MedicationNew />
       </BrowserRouter>
     )
-    expect(screen.getByText("Add a New Medication Below")).toBeInTheDocument()
+    expect(screen.getByText("Add a New Medication")).toBeInTheDocument()
     })
 })
