@@ -10,8 +10,9 @@ const ProtectedShow = ({
     sign_in_route,
     sign_out_route
 }) => {
-    const filteredMedications = medications?.filter(medication => medication.is_taken === false)
-    const todaysMedicationInfo = filteredMedications?.map(medsName => `${medsName.drug_name} ${medsName.strength} `)
+  const filteredMedications = medications?.filter(medication => medication.user_id === current_user?.id)
+  const notTakenMedications = filteredMedications?.filter(medication => medication.is_taken === false)
+  const todaysMedicationInfo = notTakenMedications?.map(medsName => `${medsName.drug_name} ${medsName.strength} `)
 
     return (
         <>
@@ -21,7 +22,7 @@ const ProtectedShow = ({
 
         <br></br>
         <h3>Current List of Medications:</h3>
-        {medications?.map((displayMyMeds)=>{
+        {filteredMedications?.map((displayMyMeds)=>{
         return (
               <>
               <NavLink to={`/${displayMyMeds.user_id}/medications/${displayMyMeds.id}`}>
