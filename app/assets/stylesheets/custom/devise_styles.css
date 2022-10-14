@@ -19,10 +19,6 @@
     background-image: linear-gradient(#3e9dd3, #2e62ac);
     backdrop-filter: saturate(180%) blur(10px);
 }
-/* Email Textfield + EmailLabel*/
-.field2 {
-    /* border-style:double */
-}
 
 /* Background Picture */
 .Background {
