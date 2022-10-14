@@ -78,23 +78,31 @@ With a quick click, our users will be able to have a sound mind and continue the
 
 # Wireframe architecture of the app
 
-- Home page localhost:3000
+1. Home page localhost:3000
   <img src="https://i.imgur.com/RXSGjk3.png" alt="Photo of the Home Page" width="400"/>
-- Registered user home page
+
+2. Registered user home page
   <img src="https://i.imgur.com/6XMJGkP.png" alt="Photo of the Registered User Home Page" width="400" />
-- Sign-in page
+
+3. Sign-in page
   <img src="https://i.imgur.com/L0mliME.png" alt="Photo of the Sign In Page" width="400"/>
-- Sign-up page
+
+4. Sign-up page
   <img src="https://i.imgur.com/R2Qj4Hk.png" alt="Photo of the Sign Up Page" width="400"/>
-- Not found 404 page
+
+5. Not found 404 page
   <img src="https://i.imgur.com/iTO45YT.png" alt="Photo of the 404 Page" width="400"/>
-- User's Dashboard
+
+6. User's Dashboard
   <img src="https://i.imgur.com/Aa5TDP9.png" alt="Photo of the User Dashboard Page" width="400"/>
-- Show page for Medication
+
+7. Show page for Medication
   <img src="https://i.imgur.com/wza3X6D.png" alt="Photo of the Medication Show Page" width="400"/>
-- Add medication Page
+
+8. Add medication Page
   <img src="https://i.imgur.com/3q9gKtg.png" alt="Photo of the Add Medication Page" width="400"/>
-- Edit Medication Page
+
+9. Edit Medication Page
   <img src="https://i.imgur.com/tMlVaZE.png" alt="Photo of the Edit Medication Page" width="400"/>
 
 # App Developers
@@ -120,7 +128,7 @@ With a quick click, our users will be able to have a sound mind and continue the
     - Austin Walker
     - Charlene Baxter
     - Sarah Proctor
-- Mentor: Eddie Gomez, Luke Olson
+- Mentors: Eddie Gomez, Luke Olson
 
 # Upcoming future projects to the app
 
