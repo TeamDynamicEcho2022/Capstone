@@ -78,7 +78,7 @@ With a quick click, our users will be able to have a sound mind and continue the
 
 # Wireframe architecture of the app
 
-1. Home page localhost:3000
+1. Home Page
   <img src="https://i.imgur.com/RXSGjk3.png" alt="Photo of the Home Page" width="400"/>
 
 2. Registered user home page
