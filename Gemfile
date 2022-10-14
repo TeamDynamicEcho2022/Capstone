@@ -74,3 +74,7 @@ gem "bootstrap", "~> 5.2"
 gem "devise", "~> 4.8"
 
 gem "rspec-rails", "~> 5.1"
+
+gem 'delayed_job_active_record'
+
+gem 'pry', '~> 0.13.1'
