@@ -4,7 +4,7 @@ import MedicationUpdate from './MedicationUpdate'
 import { BrowserRouter } from 'react-router-dom'
 
 
-describe("<CatEdit/>", () => {
+describe("<medEdit/>", () => {
     it(" has multiple input fields on the form", () => {
         render(
             <BrowserRouter>
