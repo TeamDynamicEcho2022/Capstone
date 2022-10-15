@@ -136,3 +136,4 @@ With a quick click, our users will be able to have a sound mind and continue the
 - Making the app mobile deployable
 - Adding google map api for nearby pharmacies to be redirected
 - Adding notification email to be reminded in real time 
+- Adding check box or button if traveling is true so user can add medications to the list.
