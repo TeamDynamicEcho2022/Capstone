@@ -11,13 +11,21 @@ const NotFound = () => {
 
     return(
         <>
-          <h3>
-          <img src={errorimg} alt ="404" /> Sorry, we couldn't find what you were looking for.</h3>
-            <Button
-               onClick={handleSubmit}
-               name="submit"> 
-               Home 
-            </Button>
+        <div className="ErrorColumns">
+            <div className="rightColumn">
+                <h3 className="errorText">Sorry, we couldn't find what you were looking for. Please click the button below to return Home.</h3>
+                    <div className="errorButtonSpace">
+                        <Button className="errorButton"
+                            onClick={handleSubmit}
+                            name="submit"> 
+                            Home 
+                        </Button>
+                    </div>
+            </div>
+            <div className="leftColumn">
+                <img src={errorimg} alt ="404" className="errorImg" /> 
+            </div>
+        </div>
         </>
     )
 }

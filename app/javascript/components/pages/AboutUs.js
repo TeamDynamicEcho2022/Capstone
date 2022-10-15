@@ -7,83 +7,87 @@ import jereme from '../assets/lorem.jpg'
 const AboutUs = () => {
     return (
     <>
-    <h1>About Us</h1>
-
-        <Card
-        style={{
-            width: '18rem'
-        }}
+    <h1 className='aboutTitle'>About Us</h1>
+<div className="aboutUsContainer">
+        <Card className="danielCard"
         >
+        <div className="imgContainer">
         <img
+            className='danielImg'
             alt="Sample"
             src={daniel}
         ></img>
-        <CardBody>
-            <CardTitle tag="h5">
+        </div>
+        <CardBody className="danielCardBody"y>
+            <CardTitle tag="h5" className='cardTitle'>
             Daniel
             </CardTitle>
             <CardSubtitle
-            className="mb-2 text-muted"
+            className="mb-2"
             tag="h6"
             >
             Tech Lead
             </CardSubtitle>
-            <CardText>
+            <br></br>
+            <CardText className='danielDescription'>
             Daniel Clement is a full-stack web developer with a strong passion for problem solving. Some of his interests include creating music, visiting the lovely city of Asheville, NC on occasion, and playing board games.
             </CardText>
         </CardBody>
         </Card>
 
-        <Card
-        style={{
-            width: '18rem'
-        }}
+        <Card className="dawitCard"
         >
+            <div className="imgContainer">
         <img
+            className='dawitImg'
             alt="Sample"
             src={dawit}
         ></img>
-        <CardBody>
-            <CardTitle tag="h5">
+            </div>
+        <CardBody className="dawitCardBody">
+            <CardTitle tag="h5" className='cardTitle'>
             Dawit
             </CardTitle>
             <CardSubtitle
-            className="mb-2 text-muted"
+            
+            className="mb-2"
             tag="h6"
             >
             Product and Project Manager
             </CardSubtitle>
-            <CardText>
-            Pokem ipsum dolor sit amet Pokemon Heroes Magneton consectetur adipisicing elit Nidorino Mime Jr Miltank. Gold Swift Karrablast Pokemon Oshawott Onix Zekrom. Leech Seed Regigigas Samurott Hypno Elite Four Burnt Berry Herdier. Hoenn Golett Alomomola Storm Badge Tyranitar Dodrio Leech Seed. Pokemon Lunatone Eevee Cleffa Rotom Poliwag Delibird.
+            <CardText className='dawitDescription'>
+                <br></br>
+            Dawit is a full-stack web developer who is self-motivated, responsible, team oriented, reliable and hard working. He loves spending time with his family, work on DIY projects and travel.            
             </CardText>
         </CardBody>
         </Card>
 
-        <Card
-        style={{
-            width: '18rem'
-        }}
+        <Card className='jeremeCard'
         >
+        <div className="imgContainer">
         <img
+            className='jeremeImg'
             alt="Sample"
             src={jereme}
         ></img>
-        <CardBody>
-            <CardTitle tag="h5">
+        </div>
+        <CardBody className="jeremeCardBody">
+            <CardTitle tag="h5" className='cardTitle'>
             Jereme
             </CardTitle>
             <CardSubtitle
-            className="mb-2 text-muted"
+            className="mb-2"
             tag="h6"
             >
             Design Lead
             </CardSubtitle>
-            <CardText>
-            Pika-pi Zapdos Piplup Poison Sting Fraxure Buizel Emolga. Charmander Corsola Slowbro Sunkern Potion Magneton Mienfoo. Volcano Badge Phanpy Hitmonchan Bubble Ambipom Solosis Celadon City. Fire Red Vanillite Seadra bicycle Foongus Piplup Koffing. Ivysaur Charmeleon Staryu Tynamo Cacnea Suicune Growl.
-            </CardText>
+            <br></br>
+            <CardText className='danielDescription'>
+            Jereme is a full stack developer motivated by his curiosity to explore and learn. He enjoys the quiet, peaceful tunes of nature--and where he can't find that he equally loves listening to instrumental music. 
+         </CardText>
         </CardBody>
         </Card>
-
+</div>
     </>
     )
 }

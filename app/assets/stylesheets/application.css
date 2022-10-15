@@ -337,3 +337,119 @@ header {
     font-family: 'Bold', metalic;
 }
         
+
+
+/* Daniel's About Me */
+.aboutUsContainer{
+    display:grid;
+    grid-template-columns:repeat(3,auto);
+    grid-gap:0ren;
+    height:850px;
+    padding-left:15%;
+    padding-right:10%;
+    background-image: linear-gradient(to bottom right, #8EC3DA, #7d87cc);
+    }
+
+.danielImg, .dawitImg, .jeremeImg {
+    width:90%;
+    height:50%;
+    border-radius:20rem;
+
+}
+
+.aboutTitle{
+    color: #2e62ac;
+    padding-top:1rem;
+    background-color:#A8DEE0;
+    display: none;
+}
+.danielCard, .dawitCard, .jeremeCard {
+    /* border-style: dotted; */
+    /* background-color: #fdd219; */
+    width: 80%;
+    padding-top:0.5rem;
+    align-items:right;
+    background-color: antiquewhite;
+    
+}
+
+.danielDescription{
+    position: absolute;
+    width:315.05px;
+    top:500px;
+    padding:1rem;
+}
+.dawitDescription{
+    position: absolute;
+    width:300.05px;
+    top:480px;
+    padding:1rem;
+}
+
+.imgContainer{
+    align-items:center;
+    text-align:center;
+    height: 600px;
+}
+
+.cardTitle{
+    font-size:18px;
+    font-weight: 600;
+    position:absolute;
+    top:450px;
+    padding:1rem;
+}
+
+.mb-2{
+    font-size: 13px;
+    font-style: italic;
+    position:absolute;
+    top:470px;
+    padding:1rem;
+}
+
+/* .danielCardBody, .dawitCardBody, .jeremeCardBody {
+}  */
+
+/* Error Page */
+
+.errorImg{
+    width:100%;
+    height: 60rem;
+    background-image:absolute;
+    float: left;
+}
+
+.rightColumn{
+    text-align: right ;
+    position: fixed;
+    right: 10px;
+    left:550px;
+    top: 300px;
+
+    border-radius: 20px;
+    border-color: #7d87cc;
+    color: #403f40;
+    font-size: 45px;
+    background-color: whitesmoke;
+    opacity: 80%;
+    border-style: double;
+}
+
+.rightColumn .errorText{
+    text-align: center;
+}
+
+.errorButton{
+    font-size: 25px;
+    border-radius: 20px;
+    width:200px;
+
+    
+}
+
+.errorButtonSpace{
+    text-align: center;
+    padding-bottom:1rem
+
+}
