@@ -351,7 +351,7 @@ header {
     }
 
 .danielImg, .dawitImg, .jeremeImg {
-    width:90%;
+    width:80%;
     height:50%;
     border-radius:20rem;
 
@@ -375,13 +375,13 @@ header {
 
 .danielDescription{
     position: absolute;
-    width:315.05px;
+    width:20%;
     top:500px;
     padding:1rem;
 }
 .dawitDescription{
     position: absolute;
-    width:300.05px;
+    width:18%;
     top:480px;
     padding:1rem;
 }
@@ -406,6 +406,7 @@ header {
     position:absolute;
     top:470px;
     padding:1rem;
+    width:15%;
 }
 
 /* .danielCardBody, .dawitCardBody, .jeremeCardBody {
