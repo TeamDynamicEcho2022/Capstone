@@ -17,6 +17,7 @@
     background-image: url("https://i.imgur.com/o1rdDam.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
+    padding-right:10px;
  }
 
  .homeBox {
@@ -25,16 +26,18 @@
 
  a:link, a:visited {
     text-decoration: none !important;
-    color: seashell !important;
+    color: rgb(46, 186, 137) !important;
     padding: 20px;
     display: inline-block;
     font: bold;
+    -webkit-text-stroke: 0.25px black;
   }
   
   a:hover, a:active {
     text-decoration: none;
     color: tomato !important;
   }
+  
 
   footer {
     padding: 0px;
@@ -49,11 +52,12 @@
 }
 
 .footerText {
-    margin-top: 12px;
+    margin-top: 10px;
     display: flex;
     align-content: flex-end;
     justify-content: center;
     align-items: flex-end;
+    padding-bottom: 10px;
 }
 
 .footerBtn {
@@ -74,7 +78,7 @@ header {
 }
 
 .navBar {
-    padding-top: 10px;
+    padding-top: 15px;
     font-size: 22px;
     height: 80px;
     width: 100%;
@@ -343,10 +347,12 @@ header {
 .aboutUsContainer{
     display:grid;
     grid-template-columns:repeat(3,auto);
-    grid-gap:0ren;
-    height:850px;
+    grid-gap: 0ren;
+    margin-bottom: 60px;
+    padding-top: 10px;
     padding-left:15%;
     padding-right:10%;
+    padding-bottom: 30px;
     background-image: linear-gradient(to bottom right, #8EC3DA, #7d87cc);
     }
 
@@ -445,12 +451,89 @@ header {
     font-size: 25px;
     border-radius: 20px;
     width:200px;
-
-    
 }
 
 .errorButtonSpace{
     text-align: center;
     padding-bottom:1rem
+}
 
+.med-cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 25px 25px 25px 25px;
+  gap: 1%;
+  padding: 20px;
+  text-align: center;
+}
+
+.single-med-card{
+    width: 18rem;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: aliceblue;
+    height: 18rem;
+}
+
+.dashboard-background{
+    background: linear-gradient(to bottom right, #8EC3DA, #7d87cc);
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 60px;
+    padding-left: 20px;
+}
+
+.today-container{
+    display: flex;
+    border-radius: 10px;
+    align-content: flex-start;
+    width: 20rem;
+    height: 20rem;
+    background-color:rgba(255, 252, 95, 0.758);
+    box-shadow: 5px 5px;
+    margin: auto;
+    flex-direction: column;
+}
+
+/* ////////// STYLING FOR MEDICATION SHOW */
+
+.med-show-background{
+    padding-bottom: 60px;
+    background: linear-gradient(to bottom right, #7d87cc, #8EC3DA);
+}
+
+.med-show-body {
+    display: flex;
+    justify-content: center;
+}
+
+.med-show-card{
+    width: 30rem;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: aliceblue;
+    height: 45rem;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.hover-med-boxes {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease-in-out;
+}
+  
+.hover-med-boxes:hover {
+    box-shadow: 0 5px 15px rgba(122, 122, 122, 0.8);
+}
+
+.med-show-container {
+    display: flex;
+    flex-wrap: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
