@@ -21,7 +21,7 @@ const ProtectedShow = ({
         <div className="today-container">
         {todaysMedicationInfo.map((med) => {
           return (
-            <div style={{textAlign: "center", color: "#0AACFE"}}>
+            <div style={{textAlign: "center", color: "#004C73"}}>
               <br/>{med}<br/>
             </div>
         )})}
