@@ -35,7 +35,7 @@ const ProtectedShowMedication = ({
             <br/>
                 <img 
                 src={currentMedications?.image}
-                style={{width:'80%', margin: 'auto', borderRadius: '10px'}}
+                style={{width:'50%', margin: 'auto', borderRadius: '10px'}}
                 >
                 </img>
             <CardBody>
