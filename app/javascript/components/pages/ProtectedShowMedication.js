@@ -1,6 +1,8 @@
 import React from 'react'
-import {Card, CardHeader, ListGroup, ListGroupItem, Button} from 'reactstrap'
+import {Card, CardHeader, CardBody, Button, CardTitle} from 'reactstrap'
 import { NavLink, useNavigate, useParams } from 'react-router-dom'
+import edit from "../assets/edit.png"
+import trash from "../assets/trash.png"
 
 const ProtectedShowMedication = ({
     medications,
@@ -24,45 +26,51 @@ const ProtectedShowMedication = ({
     }
 
     return (
-        <>
-        <Card style={{ width: '18rem' }}
+        <div className="med-show-background med-show-body">
+        <Card className="med-show-card"
         >
-        <CardHeader>
-            {currentMedications?.drug_name}'s Information
-        </CardHeader>
-        <CardHeader>
-            <img src={currentMedications?.image}></img>
-        </CardHeader>
-            <ListGroup flush>
-                <ListGroupItem>
-                    Drug Name: {currentMedications?.drug_name}
-                </ListGroupItem>
-                <ListGroupItem>
+            <CardHeader>
+                <span style={{color: "#619796", fontSize: "24px"}}>{currentMedications?.drug_name}</span>
+            </CardHeader>
+            <br/>
+                <img 
+                src={currentMedications?.image}
+                style={{width:'80%', margin: 'auto', borderRadius: '10px'}}
+                >
+                </img>
+            <CardBody>
+                <br/>
+                <CardTitle>
                     Drug Category: {currentMedications?.drug_cat}
-                </ListGroupItem>
-                <ListGroupItem>
+                </CardTitle>
+                <br/>
+                <CardTitle>
                     Description: {currentMedications?.description}
-                </ListGroupItem>
-                <ListGroupItem>
+                </CardTitle>
+                <br/>
+                <CardTitle>
                     Frequency: {currentMedications?.frequency}
-                </ListGroupItem>
-                <ListGroupItem>
+                </CardTitle>
+                <br/>
+                <CardTitle>
                     Strength: {currentMedications?.strength}
-                </ListGroupItem>
-                <ListGroupItem>
+                </CardTitle>
+                <br/>
+                <CardTitle>
                     {currentMedications?.is_taken && <>Taken Today: Yes</>}
                     {!currentMedications?.is_taken && <>Taken Today: No</>}
-                </ListGroupItem>
-                    <div>
-                        <NavLink to={`/${current_user?.id}/medicationupdate/${currentMedications?.id}`} >
-                            <Button> Edit </Button>
-                        </NavLink>
-                    <br></br>
-                            <Button onClick={handleDelete}> Delete </Button>
-                    </div>
-            </ListGroup>
+                </CardTitle>
+                <br/>
+                <div className="med-show-container">
+                    <NavLink to={`/${current_user?.id}/medicationupdate/${currentMedications?.id}`} >
+                    <img src={edit} alt="Edit Button" style={{width: "40px", cursor: "pointer"}} />
+                    </NavLink>
+                <br></br>
+                        <img src={trash} alt="Delete Button" onClick={handleDelete} style={{width: "40px", height: "40px", cursor: "pointer"}} />
+                </div>
+            </CardBody>
         </Card>
-        </>
+        </div>
     )
 }
 

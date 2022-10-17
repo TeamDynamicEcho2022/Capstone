@@ -3,6 +3,9 @@ import {Card, CardBody, CardTitle, CardSubtitle, CardText} from "reactstrap"
 import daniel from '../assets/dev1daniel.jpg'
 import dawit from '../assets/dev2dawit.jpg'
 import jereme from '../assets/lorem.jpg'
+import githubimg from "../assets/github.png"
+import linkedinimg from "../assets/linkedin.png"
+
 
 const AboutUs = () => {
     return (
@@ -32,6 +35,22 @@ const AboutUs = () => {
             <CardText className='danielDescription'>
             Daniel Clement is a full-stack web developer with a strong passion for problem solving. Some of his interests include creating music, visiting the lovely city of Asheville, NC on occasion, and playing board games.
             </CardText>
+            <CardText style={{textAlign: "center"}}>
+            <a href="https://github.com/dnlclmnt">
+            <img
+            style={{width: "40px"}}
+            alt="Github Image"
+            src={githubimg}
+            />
+            </a>
+            <a href="https://www.linkedin.com/in/danielclement-/">
+            <img
+            style={{width: "40px"}}
+            alt="LinkedIn Image"
+            src={linkedinimg}
+            />
+            </a>
+            </CardText>
         </CardBody>
         </Card>
 
@@ -53,11 +72,28 @@ const AboutUs = () => {
             className="mb-2"
             tag="h6"
             >
-            Product and Project Manager
+            Product/ Project Manager
+            <br/>
             </CardSubtitle>
-            <CardText className='dawitDescription'>
-                <br></br>
+            <br/>
+            <CardText className='danielDescription'>
             Dawit is a full-stack web developer who is self-motivated, responsible, team oriented, reliable and hard working. He loves spending time with his family, work on DIY projects and travel.            
+            </CardText>
+            <CardText style={{textAlign: "center"}}>
+            <a href="https://github.com/addisdave">
+            <img
+            style={{width: "40px"}}
+            alt="Github Image"
+            src={githubimg}
+            />
+            </a>
+            <a href="https://www.linkedin.com/in/dawit-kel-738ba3151">
+            <img
+            style={{width: "40px"}}
+            alt="LinkedIn Image"
+            src={linkedinimg}
+            />
+            </a>
             </CardText>
         </CardBody>
         </Card>
@@ -85,6 +121,22 @@ const AboutUs = () => {
             <CardText className='danielDescription'>
             Jereme is a full stack developer motivated by his curiosity to explore and learn. He enjoys the quiet, peaceful tunes of nature--and where he can't find that he equally loves listening to instrumental music. 
          </CardText>
+         <CardText style={{textAlign: "center"}}>
+            <a href="https://github.com/JPD99">
+            <img
+            style={{width: "40px"}}
+            alt="Github Image"
+            src={githubimg}
+            />
+            </a>
+            <a href="https://www.linkedin.com/in/jeremedoan/">
+            <img
+            style={{width: "40px"}}
+            alt="LinkedIn Image"
+            src={linkedinimg}
+            />
+            </a>
+            </CardText>
         </CardBody>
         </Card>
 </div>

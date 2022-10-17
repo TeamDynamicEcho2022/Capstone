@@ -1,6 +1,7 @@
 import React from "react"
 import {Nav, NavItem} from "reactstrap"
 import { NavLink } from "react-router-dom"
+import medicalSymbol from "../assets/medical-symbol.png"
 
 const Navigation = ({
     current_user,
@@ -16,7 +17,8 @@ const Navigation = ({
         <Nav className="navBar">
             <NavItem>
                 <NavLink to ="/">
-                Home
+                    <img src={medicalSymbol} style={{width: "25px", height: "20px"}}/>
+                    Home
                 </NavLink>
             </NavItem>
             <NavItem>
