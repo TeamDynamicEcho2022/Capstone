@@ -30,7 +30,6 @@
     padding: 20px;
     display: inline-block;
     font: bold;
-    -webkit-text-stroke: 0.25px black;
   }
   
   a:hover, a:active {
